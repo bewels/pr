@@ -1,0 +1,54 @@
+@import '../../../../scss/vars';
+.succes-wrapper{
+    position: relative;
+    display: flex;
+    background: $blue;
+    font-weight: 300;
+    width: 100%;
+    height: 100vh;
+    color: $white;
+    .succes{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 40px;
+        width: 100%;
+        font-size: 16px;
+        .header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            height: 80px;
+            border-bottom: 1px solid #EBE7FF;
+            margin-bottom: 50px; 
+            .logo{
+                font-size: 16px;
+            }
+        }
+        h2{
+            font-size: 28px;
+            line-height: 33px;
+            font-weight: 400;
+            text-align: center;
+        }
+
+        span{
+            font-size: 16px;
+            line-height: 19px;
+            cursor: pointer;
+        }
+
+        img{
+            margin-bottom: 50px;
+            pointer-events: none;
+            user-select: none;
+        }
+        .logotype{
+            position: absolute;
+            bottom: 30px;
+            left: 40px;
+            cursor: pointer;
+        }
+    }
+}

@@ -1,0 +1,176 @@
+@import '../../../scss/vars';
+
+.profile-section{
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    width: 100%;
+    height: 100%;
+    padding: 15px 40px;
+
+    .record{
+        .title{
+            display: block;
+            font-size: 16px;
+            font-weight: 400;
+            margin-bottom: 15px;
+            cursor: pointer;
+        }
+        &-list{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            list-style: none;
+
+            .massage{
+                text-align: center;
+                a{
+                    color: $light-blue;
+                    text-decoration: underline;
+                }
+            }
+
+            &-item{
+                display: flex;
+                flex-direction: column;
+                width: 475px;
+                height: 174px;
+                background: $white;
+                padding: 20px;
+                box-shadow: 0px 0px 5px #EBE7FF;
+                border-radius: 5px;
+                .info{
+                    margin-bottom: 10px;
+                    width: 70%;
+                }
+
+                .doctor-info{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    img{
+                        width: 60px;
+                        height: 60px;
+                        border-radius: 50%;
+                    }
+
+                    .doctor{
+                        display: flex;
+                        align-items: center;
+                        img{
+                            margin-right: 15px;
+                        }
+                        div{
+                            display: flex;
+                            flex-direction: column;
+                        }
+
+                        .name{
+                            font-weight: 500;
+                        }
+                        .specialty{
+                            color: #EBE7FF;
+                        }
+                    }
+                    .btn{
+                        width: 100px;
+                    }
+                }
+            }
+        }
+    }
+
+    .electronic-section{
+        .title{
+            display: block;
+            font-size: 16px;
+            font-weight: 400;
+            margin-bottom: 15px;
+        }
+        .electronic-card{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 15px;
+            .card{
+                display: grid;
+                grid-template-columns: 25% 1fr;
+                width: 100%;
+                height: 100%;
+                background: $white;
+                box-shadow: 0px 0px 5px #EBE7FF;
+                border-radius: 5px;
+                cursor: pointer;
+                &-list{
+                    list-style: none;
+                    &-item{
+                        padding: 7px 0;
+                        &::before {
+                            color: #000;
+                            float: left;
+                            margin: 0 0 0 -1em;
+                            width: 1em;
+                            content: '\2022';
+                            transition: color .2s linear;
+                        }
+                    }
+                }
+
+                &-logo{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 5px;
+                    transition: background .2s linear;
+                }
+
+                &-info{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    padding: 20px 35px;
+                    width: 70%;
+                    h2{
+                        position: relative;
+                        font-size: 28px;
+                        font-weight: 400;
+                        margin-bottom: 25px;
+
+                        &::after{
+                            content: '';
+                            position: absolute;
+                            width: 100%;
+                            height: 2px;
+                            background: #EBE7FF;
+                            left: 0;
+                            bottom: -10px;
+                            transition: background .2s linear;
+                        }
+                    }
+                }
+
+                &:hover{
+                    .card-logo{
+                        background: $light-blue;
+                    }
+                    .card-info{
+                        h2::after{
+                            background: $light-blue;
+                        }
+                    }
+
+                    .card-list{
+                        &-item::before{
+                            color: $light-blue;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+
+
+    .myrecords-wrapper{
+        
+    }
+}

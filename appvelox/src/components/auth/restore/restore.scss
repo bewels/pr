@@ -1,0 +1,64 @@
+@import '../../../scss/vars';
+
+.section-restore{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: calc(100vh - 80px);
+
+    h2{
+        margin-bottom: 15px;
+        font-size: 28px;
+        font-weight: 300;
+    }
+    .sub-title{
+        margin-bottom: 35px;
+        font-size: 14px;
+    }
+
+    .restore-form{
+        width: 350px;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 15px;
+        .input-list {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            margin-bottom: 30px;
+            input{
+                width: 40px;
+                height: 40px;
+                border-radius: 5px;
+                border: 0.5px solid #000000;
+                text-align: center;
+                font-size: 28px;
+                font-weight: 300;
+                &:focus{
+                    outline: none;
+                    border-color: $violet;
+                }
+            }
+        }
+        .timer-count{
+            opacity: .5;
+        }
+        .timer{
+            width: 100%;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+    }
+
+    .massage{
+        color: $light-blue;
+        cursor: pointer;
+    }
+
+    .warning{
+        border-color: rgb(209, 23, 23)!important;
+    }
+}

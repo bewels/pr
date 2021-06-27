@@ -1,0 +1,160 @@
+@import './scss/vars';
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Rubik', sans-serif;
+  font-size: 14px;
+}
+
+body{
+  overflow: hidden;
+}
+
+::-webkit-scrollbar{
+  width: 8px; /* ширина для вертикального скролла */
+  background-color: #EBE7FF;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $blue;
+  border-radius: 5px;
+}
+// Стили блока с ивентами
+.fc-event-time, .fc-daygrid-event-dot {
+  display: none;
+  
+}
+
+.fc-daygrid-dot-event{
+  justify-content: flex-end;
+}
+
+.fc-event-title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $light-blue;
+  color: $white;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  flex-grow: 0!important;
+}
+
+// Настройки основного блока
+
+.fc{
+  width: 100%;
+  border-radius: 5px; 
+}
+
+// Настройки блока календаря
+
+.fc-view-harness{
+  padding: 0 10px 70px 10px;
+  background: #EBE7FF;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.fc .fc-view-harness-active > .fc-view{
+  position: static;
+  width: 100%;
+  height: 100%;
+  
+}
+.fc .fc-scroller-liquid-absolute{
+  position: static;
+  overflow: hidden;
+  border: none;  
+}
+
+.fc-theme-standard .fc-scrollgrid, .fc-theme-standard td{
+  border: none;
+  background: $white;
+  a {
+    font-weight: 400;
+    font-size: 20px;
+  }
+}
+
+
+.fc-daygrid-day-frame {
+  border: 2px solid transparent;
+  transition: border-color .2s linear;
+  &:hover{
+    border-color: $light-blue;
+  }
+}
+
+.fc-theme-standard th{
+  background: transparent;
+  border: none;
+  
+  a{
+    font-size: 14px!important;
+    font-weight: 300!important;
+  }
+}
+
+.fc-daygrid-day-top{
+  flex-direction: column!important;
+  padding: 5px 0 0 10px;
+}
+.fc-daygrid-event{
+  padding: 5px;
+}
+
+.fc-daygrid-body{
+  width: 100%;
+}
+
+
+.fc-day-disabled, .fc-day-other{
+  background: transparent!important;
+
+  .fc-daygrid-day-top{
+    display: none;
+  }
+}
+.fc-scrollgrid {
+  table{
+    background: #EBE7FF!important;
+  }
+
+}
+
+.fc-day-today{
+  background: $violet!important;
+  a{
+    color: $white;
+  }
+}
+
+// Настройки хэдера
+
+.fc-header-toolbar {
+  background: $violet;
+  margin: 0 !important;
+  min-height: 60px;
+  color: $white;
+  padding: 0 200px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+
+  h2{
+    font-size: 14px!important;
+    font-weight: 400;
+  }
+
+  button{
+    background: transparent !important;
+    border: none !important;
+
+    &:focus{
+      box-shadow: none !important;
+    }
+  }
+}

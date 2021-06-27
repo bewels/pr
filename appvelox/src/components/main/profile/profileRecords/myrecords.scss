@@ -1,0 +1,94 @@
+@import '../../../../scss/vars';
+.myrecords-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 15px 40px;
+
+    .records-main{
+        width: 100%;
+        max-height: calc(100vh - 55px);
+        overflow-y: scroll;
+        .nav{
+            display: grid;
+            width: 100%;
+            margin-bottom: 15px;
+            .massage{
+                display: flex;
+                justify-content: flex-end;
+                width: 475px;
+                justify-self: center;
+                color: $light-blue;
+                text-decoration: underline;
+                cursor: pointer;
+            }
+            .back{
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                font-size: 16px;
+            }
+        }
+
+        .record-list{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 20px;
+            list-style: none;
+            &-item{
+                display: flex;
+                flex-direction: column;
+                width: 475px;
+                height: 174px;
+                background: $white;
+                padding: 20px;
+                box-shadow: 0px 0px 5px #EBE7FF;
+                border-radius: 5px;
+                .info{
+                    margin-bottom: 10px;
+                    width: 70%;
+                }
+
+                .doctor-info{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    img{
+                        width: 60px;
+                        height: 60px;
+                        border-radius: 50%;
+                    }
+
+                    .doctor{
+                        display: flex;
+                        align-items: center;
+                        img{
+                            margin-right: 15px;
+                        }
+                        div{
+                            display: flex;
+                            flex-direction: column;
+                        }
+
+                        .name{
+                            font-weight: 500;
+                        }
+                        .specialty{
+                            color: #EBE7FF;
+                        }
+                    }
+                    .btn{
+                        width: 100px;
+                    }
+                }
+            }
+
+            
+        }
+    }
+
+    .calendar{
+        margin-left: 40px;
+    }
+}
